@@ -23,7 +23,7 @@
             <h2>Publications</h2>
               <p>Valkonen, Petteri. 2008. Showing a little promise: Identifying and retrieving explicit illocutionary acts from a corpus of written prose. In: Jucker, Andreas H. and Irma Taavitsainen (eds.). <a href="http://www.benjamins.nl/#catalog/books/pbns.176">Speech Acts in the History of English</a>. Amsterdam: John Benjamins, 223&ndash;248.</p>
           </div>
-          <div class="span4">
+          <div id="contactInfo" class="span4">
             <div id="gravatar"></div>
             <h3>Contact Information</h3>
             <address>
@@ -41,7 +41,7 @@
     <script type="text/javascript" src="js/jquery.gravatar.js"></script>
     <script type="text/javascript">
       $(document).ready(function() {
-        $('#gravatar').empty().append($.gravatar($('a#email').attr('mailto'), { size: 170 } ))
+        var email = $('a#email').attr('mailto'); var width = $('#contactInfo').width(); $('#gravatar').empty().append($.gravatar(email, { size: width } ))
       })
     </script>
   </body>
