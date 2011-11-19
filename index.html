@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Petteri Valkonen</title>
+    <link rel="stylesheet" href="http://twitter.github.com/bootstrap/1.4.0/bootstrap.min.css" />
+    <style type="text/css">
+      h1 small {
+        font-size: 15px;
+      }
+    </style>
+  <body>
+    <div class="container">
+      <div class="content">
+        <div class="page-header">
+          <h1>Petteri Valkonen <small>Beloved son, brother and husband. A software engineer by day, an armchair corpus linguist by night.</small></h1>
+        </div>
+        <div class="row">
+          <div class="span10">
+            <h2>Curriculum Vitae&mdash;or Rather, a Lack Thereof</h2>
+            <blockquote>
+              <p>If you really want to hear about it, the first thing you'll probably want to know is where I was born, and what my lousy childhood was like, and how my parents were occupied and all before they had me, and all that David Copperfield kind of crap, but I don't feel like going into it, if you want to know the truth.</p>
+              <small>J. D. Salinger: <em>The Catcher in the Rye</em></small>
+            </blockquote>
+            <p>So, no, there isn't one. For an overview of my professional qualifications and experience, you can see my <a href="http://www.linkedin.com/in/petterivalkonen">LinkedIn profile</a>.</p>
+            <h2>Publications</h2>
+              <p>Valkonen, Petteri. 2008. Showing a little promise: Identifying and retrieving explicit illocutionary acts from a corpus of written prose. In: Jucker, Andreas H. and Irma Taavitsainen (eds.). <a href="http://www.benjamins.nl/#catalog/books/pbns.176">Speech Acts in the History of English</a>. Amsterdam: John Benjamins, 223&ndash;248.</p>
+          </div>
+          <div class="span4">
+            <div id="gravatar"></div>
+            <h3>Contact Information</h3>
+            <address>
+              Birger Kaipiaisen katu 4 C 31<br />
+              FI-00560 Helsinki<br />
+              Finland<br />
+              <a id="email" mailto="&#112;&#101;&#116;&#116;&#101;&#114;&#105;&#046;&#118;&#097;&#108;&#107;&#111;&#110;&#101;&#110;&#064;&#105;&#107;&#105;&#046;&#102;&#105;">&#112;&#101;&#116;&#116;&#101;&#114;&#105;&#046;&#118;&#097;&#108;&#107;&#111;&#110;&#101;&#110;&#064;&#105;&#107;&#105;&#046;&#102;&#105;</a>
+          </address>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
+    <script type="text/javascript" src="js/md5-min.js"></script>
+    <script type="text/javascript" src="js/jquery.gravatar.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $('#gravatar').empty().append($.gravatar($('a#email').attr('mailto'), { size: 170 } ))
+      })
+    </script>
+  </body>
+</html>
