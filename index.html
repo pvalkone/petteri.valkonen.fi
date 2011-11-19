@@ -6,7 +6,23 @@
     <meta name="author" content="Petteri Valkonen">
     <link rel="stylesheet" href="http://twitter.github.com/bootstrap/1.4.0/bootstrap.min.css" />
     <style type="text/css">
-      h1 small { font-size: 15px; }
+      h1 small {
+        font-size: 15px;
+      }
+
+      .media-grid img {
+        float: left;
+        padding: 4px;
+        margin: 0 0 18px 20px;
+        border: 1px solid #ddd;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        border-radius: 4px;
+        -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
+        -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
+        display: block;
+      }
     </style>
   <body>
     <div class="container">
@@ -26,7 +42,11 @@
               <p>Valkonen, Petteri. 2008. Showing a little promise: Identifying and retrieving explicit illocutionary acts from a corpus of written prose. In: Jucker, Andreas H. and Irma Taavitsainen (eds.). <a href="http://www.benjamins.nl/#catalog/books/pbns.176">Speech Acts in the History of English</a>. Amsterdam: John Benjamins, 223&ndash;248.</p>
           </div>
           <div id="contactInfo" class="span4">
-            <div id="gravatar"></div>
+            <ul class="media-grid">
+              <li>
+                <img id="gravatar" class="thumbnail" />
+              </li>
+            </ul>
             <h3>Contact Information</h3>
             <address>
               Birger Kaipiaisen katu 4 C 31<br />
@@ -40,10 +60,11 @@
     </div>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
     <script type="text/javascript" src="js/md5-min.js"></script>
-    <script type="text/javascript" src="js/jquery.gravatar.js"></script>
     <script type="text/javascript">
       $(document).ready(function() {
-        var email = $('a#email').attr('mailto'); var width = $('#contactInfo').width(); $('#gravatar').empty().append($.gravatar(email, { size: width } ))
+        var email = $('a#email').attr('mailto')
+        var width = $('#contactInfo').width()
+        $('#gravatar').attr('src', 'http://gravatar.com/avatar/' + hex_md5(email) + '.jpg?s=' + width)
       })
     </script>
   </body>
