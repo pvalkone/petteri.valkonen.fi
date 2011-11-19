@@ -62,9 +62,7 @@
     <script type="text/javascript" src="js/md5-min.js"></script>
     <script type="text/javascript">
       $(document).ready(function() {
-        var email = $('a#email').attr('mailto')
-        var width = $('#contactInfo').width()
-        $('#gravatar').attr('src', 'http://gravatar.com/avatar/' + hex_md5(email) + '.jpg?s=' + width)
+        $('#gravatar').attr('src', 'http://gravatar.com/avatar/' + hex_md5($('a#email').attr('mailto')) + '.jpg?s=' + $('#contactInfo').width()) 
       })
     </script>
   </body>
