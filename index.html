@@ -26,7 +26,7 @@
         margin: 0;
         font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
         font-feature-settings: "kern", "liga", "calt";
-        line-height: 1.65;
+        line-height: 1.55;
         color: var(--text);
         background-color: var(--bg);
         -webkit-font-smoothing: antialiased;
@@ -45,12 +45,12 @@
       .container {
         max-width: 56rem;
         margin: 0 auto;
-        padding: clamp(2.5rem, 6vw, 5rem) clamp(1.25rem, 4vw, 2rem);
+        padding: clamp(1.75rem, 4vw, 3rem) clamp(1.25rem, 3vw, 2rem);
       }
 
       .page-header {
-        padding-bottom: 2rem;
-        margin: 0 0 3rem;
+        padding-bottom: 1.25rem;
+        margin: 0 0 2rem;
         border-bottom: 1px solid var(--rule);
       }
 
@@ -67,7 +67,7 @@
         line-height: 1.5;
         font-weight: 400;
         color: var(--muted);
-        margin-top: 0.5rem;
+        margin-top: 0.4rem;
         letter-spacing: 0;
       }
 
@@ -76,7 +76,7 @@
         line-height: 1.3;
         letter-spacing: -0.01em;
         font-weight: 600;
-        margin: 3rem 0 1rem;
+        margin: 2rem 0 0.75rem;
       }
       h2:first-child { margin-top: 0; }
 
@@ -84,38 +84,38 @@
         font-size: 0.9rem;
         line-height: 1.4;
         font-weight: 600;
-        margin: 2.25rem 0 0.5rem;
+        margin: 1.5rem 0 0.5rem;
       }
 
-      p { margin: 0 0 1rem; }
+      p { margin: 0 0 0.75rem; }
 
       blockquote {
         padding: 0 0 0 1rem;
-        margin: 1.5rem 0;
+        margin: 1rem 0;
         border-left: 1px solid var(--rule);
         color: var(--muted);
       }
-      blockquote p { margin-bottom: 0.5rem; font-size: 1rem; line-height: 1.6; }
+      blockquote p { margin-bottom: 0.4rem; font-size: 1rem; line-height: 1.55; }
       blockquote small { display: block; font-size: 0.875rem; line-height: 1.4; color: var(--muted); }
       blockquote small::before { content: "\2014 \00A0"; }
 
       .row {
         display: grid;
-        gap: 3rem;
+        gap: 2rem;
         grid-template-columns: minmax(0, 1fr);
       }
       @media (min-width: 48rem) {
         .row {
           grid-template-columns: minmax(0, 2.4fr) minmax(0, 1fr);
-          gap: 4rem;
+          gap: 3rem;
         }
       }
 
       .span10 { max-width: 36rem; }
 
-      address { font-style: normal; margin-bottom: 1rem; }
+      address { font-style: normal; margin-bottom: 0.75rem; }
 
-      ul { padding: 0; margin: 0 0 1rem 1.25rem; }
+      ul { padding: 0; margin: 0 0 0.75rem 1.25rem; }
 
       .media-grid {
         list-style: none;
@@ -129,7 +129,7 @@
         height: auto;
         aspect-ratio: 1 / 1;
         border-radius: 50%;
-        margin: 0 0 1.5rem;
+        margin: 0 0 1rem;
       }
     </style>
     <script defer src="https://cloud.umami.is/script.js" data-website-id="b8705a71-8996-4d5f-a75f-7f92004808a6"></script>
