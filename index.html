@@ -53,7 +53,7 @@
             </ul>
             <h3>Contact Information</h3>
             <address>
-              <a href="https://mailhide.io/e/gdfyNtdG" onclick="popup=window.open('https://mailhide.io/e/gdfyNtdG','mailhidepopup','width=580,height=635'); return false;">p&hellip;</a>@iki.fi (<a href="952E9EED.asc">public key</a>)
+              <a id="email" href="#" data-u="petteri.valkonen" data-d="iki.fi">p&hellip;@iki.fi</a> (<a href="952E9EED.asc">public key</a>)
             </address>
             <h3>On the Interwebs</h3>
             <ul>
@@ -70,5 +70,14 @@
         </div>
       </div>
     </div>
+    <script>
+      (function () {
+        var a = document.getElementById('email');
+        if (!a) return;
+        var addr = a.dataset.u + '@' + a.dataset.d;
+        a.href = 'mailto:' + addr;
+        a.textContent = addr;
+      })();
+    </script>
   </body>
 </html>
