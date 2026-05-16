@@ -9,6 +9,14 @@
     <style>
       *, *::before, *::after { box-sizing: border-box; }
 
+      :root {
+        --text: #111;
+        --muted: #6b7280;
+        --bg: #fff;
+        --rule: #e5e5e5;
+        --accent: #3a6b4e;
+      }
+
       html {
         font-size: 100%;
         -webkit-text-size-adjust: 100%;
@@ -19,14 +27,20 @@
         font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
         font-feature-settings: "kern", "liga", "calt";
         line-height: 1.65;
-        color: #333;
-        background-color: #fff;
+        color: var(--text);
+        background-color: var(--bg);
         -webkit-font-smoothing: antialiased;
         text-rendering: optimizeLegibility;
       }
 
-      a { color: #08c; text-decoration: none; }
-      a:hover { color: #005580; text-decoration: underline; }
+      a {
+        color: var(--accent);
+        text-decoration: underline;
+        text-decoration-thickness: 1px;
+        text-underline-offset: 3px;
+        transition: color 0.15s ease;
+      }
+      a:hover, a:focus-visible { color: var(--text); }
 
       .container {
         max-width: 56rem;
@@ -37,7 +51,7 @@
       .page-header {
         padding-bottom: 2rem;
         margin: 0 0 3rem;
-        border-bottom: 1px solid #eee;
+        border-bottom: 1px solid var(--rule);
       }
 
       h1 {
@@ -52,7 +66,7 @@
         font-size: 1rem;
         line-height: 1.5;
         font-weight: 400;
-        color: #999;
+        color: var(--muted);
         margin-top: 0.5rem;
         letter-spacing: 0;
       }
@@ -78,10 +92,11 @@
       blockquote {
         padding: 0 0 0 1rem;
         margin: 1.5rem 0;
-        border-left: 5px solid #eee;
+        border-left: 1px solid var(--rule);
+        color: var(--muted);
       }
       blockquote p { margin-bottom: 0.5rem; font-size: 1rem; line-height: 1.6; }
-      blockquote small { display: block; font-size: 0.875rem; line-height: 1.4; color: #999; }
+      blockquote small { display: block; font-size: 0.875rem; line-height: 1.4; color: var(--muted); }
       blockquote small::before { content: "\2014 \00A0"; }
 
       .row {
