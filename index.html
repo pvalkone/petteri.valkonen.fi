@@ -23,15 +23,17 @@
       html {
         font-size: 100%;
         -webkit-text-size-adjust: 100%;
+        background-color: var(--bg);
       }
 
       body {
-        margin: 0;
+        max-width: 56rem;
+        margin: 0 auto;
+        padding: clamp(1.75rem, 4vw, 3rem) clamp(1.25rem, 3vw, 2rem);
         font-family: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
         font-feature-settings: "kern", "liga", "calt";
         line-height: 1.55;
         color: var(--text);
-        background-color: var(--bg);
         -webkit-font-smoothing: antialiased;
         text-rendering: optimizeLegibility;
       }
@@ -45,13 +47,7 @@
       }
       a:hover, a:focus-visible { color: var(--text); }
 
-      .container {
-        max-width: 56rem;
-        margin: 0 auto;
-        padding: clamp(1.75rem, 4vw, 3rem) clamp(1.25rem, 3vw, 2rem);
-      }
-
-      .page-header {
+      body > header {
         padding-bottom: 1.25rem;
         margin: 0 0 2rem;
         border-bottom: 1px solid var(--rule);
@@ -99,34 +95,29 @@
         color: var(--muted);
       }
       blockquote p { margin-bottom: 0.4rem; font-size: 1rem; line-height: 1.55; }
-      blockquote small { display: block; font-size: 0.875rem; line-height: 1.4; color: var(--muted); }
-      blockquote small::before { content: "\2014 \00A0"; }
+      blockquote cite {
+        display: block;
+        font-size: 0.875rem;
+        line-height: 1.4;
+        font-style: normal;
+      }
+      blockquote cite::before { content: "\2014 \00A0"; }
 
-      .row {
+      .layout {
         display: grid;
         gap: 2rem;
         grid-template-columns: minmax(0, 1fr);
       }
       @media (min-width: 48rem) {
-        .row {
+        .layout {
           grid-template-columns: minmax(0, 2.4fr) minmax(0, 1fr);
           gap: 3rem;
         }
       }
 
-      .span10 { max-width: 36rem; }
+      main { max-width: 36rem; }
 
-      address { font-style: normal; margin-bottom: 0.75rem; }
-      address a { display: block; }
-
-      ul { padding: 0; margin: 0 0 0.75rem 1.25rem; }
-
-      .media-grid {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-      }
-      .media-grid img {
+      aside img {
         display: block;
         width: 100%;
         max-width: 200px;
@@ -135,52 +126,49 @@
         border-radius: 50%;
         margin: 0 0 1rem;
       }
+
+      address { font-style: normal; margin-bottom: 0.75rem; }
+      address a { display: block; }
+
+      ul { padding: 0; margin: 0 0 0.75rem 1.25rem; }
     </style>
     <script defer src="https://cloud.umami.is/script.js" data-website-id="b8705a71-8996-4d5f-a75f-7f92004808a6"></script>
   </head>
   <body>
-    <div class="container">
-      <div class="content">
-        <div class="page-header">
-          <h1>Petteri Valkonen <small>Beloved son, brother, husband and father. A software engineer by day, an armchair corpus linguist by night.</small></h1>
-        </div>
-        <div class="row">
-          <div class="span10">
-            <h2>Curriculum Vitae&mdash;or Rather, a Lack Thereof</h2>
-            <blockquote>
-              <p>If you really want to hear about it, the first thing you'll probably want to know is where I was born, and what my lousy childhood was like, and how my parents were occupied and all before they had me, and all that David Copperfield kind of crap, but I don't feel like going into it, if you want to know the truth.</p>
-              <small>J. D. Salinger: <em>The Catcher in the Rye</em></small>
-            </blockquote>
-            <p>So, no, there isn't one.</p>
-            <p>Should it be any consolation, for an overview of my professional qualifications and experience, you can see my <a href="https://www.linkedin.com/in/petterivalkonen">LinkedIn profile</a>. My list of publications, in all its vertigo-inducing length, is reproduced below. Finally, for the few corners of the web I've decided to call home, have a gander at the sidebar.</p>
-            <h2>Publications</h2>
-            <p>Valkonen, Petteri. 2008. Showing a little promise: Identifying and retrieving explicit illocutionary acts from a corpus of written prose. In: Jucker, Andreas H. and Irma Taavitsainen (eds.). <a href="https://www.benjamins.com/catalog/pbns.176">Speech Acts in the History of English</a>. Amsterdam: John Benjamins, 223&ndash;248.</p>
-          </div>
-          <div id="sidebar" class="span4">
-            <ul class="media-grid">
-              <li>
-                <img class="thumbnail" src="https://www.gravatar.com/avatar/574b70d50334c9b55aee7cfc7b3838d682ebfe3fa7aadb605cc3f5d314895d55?s=400" alt="Petteri Valkonen">
-              </li>
-            </ul>
-            <h3>Contact Information</h3>
-            <address>
-              <a id="email" href="#" data-u="petteri.valkonen" data-d="iki.fi">p&hellip;@iki.fi</a>
-              <a href="952E9EED.asc">Public key</a>
-            </address>
-            <h3>On the Interwebs</h3>
-            <ul>
-              <li><a href="https://www.linkedin.com/in/petterivalkonen">LinkedIn</a></li>
-              <li><a href="https://github.com/pvalkone">GitHub</a></li>
-              <li><a href="https://bsky.app/profile/petteri.valkonen.fi">Bluesky</a></li>
-              <li><a href="https://mas.to/@petsq" rel="me">Mastodon</a></li>
-              <li><a href="https://pvaaaaa.tumblr.com/">Tumblr</a></li>
-              <li><a href="https://www.librarything.com/profile/pva">LibraryThing</a></li>
-              <li><a href="https://www.strava.com/athletes/pvalkone">Strava</a></li>
-              <li><a href="https://portscout.freebsd.org/petteri.valkonen@iki.fi.html">portscout</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
+    <header>
+      <h1>Petteri Valkonen <small>Beloved son, brother, husband and father. A software engineer by day, an armchair corpus linguist by night.</small></h1>
+    </header>
+    <div class="layout">
+      <main>
+        <h2>Curriculum Vitae&mdash;or Rather, a Lack Thereof</h2>
+        <blockquote>
+          <p>If you really want to hear about it, the first thing you'll probably want to know is where I was born, and what my lousy childhood was like, and how my parents were occupied and all before they had me, and all that David Copperfield kind of crap, but I don't feel like going into it, if you want to know the truth.</p>
+          <cite>J. D. Salinger, <em>The Catcher in the Rye</em></cite>
+        </blockquote>
+        <p>So, no, there isn't one.</p>
+        <p>Should it be any consolation, for an overview of my professional qualifications and experience, you can see my <a href="https://www.linkedin.com/in/petterivalkonen">LinkedIn profile</a>. My list of publications, in all its vertigo-inducing length, is reproduced below. Finally, for the few corners of the web I've decided to call home, have a gander at the sidebar.</p>
+        <h2>Publications</h2>
+        <p>Valkonen, Petteri. 2008. Showing a little promise: Identifying and retrieving explicit illocutionary acts from a corpus of written prose. In: Jucker, Andreas H. and Irma Taavitsainen (eds.). <a href="https://www.benjamins.com/catalog/pbns.176">Speech Acts in the History of English</a>. Amsterdam: John Benjamins, 223&ndash;248.</p>
+      </main>
+      <aside>
+        <img src="https://www.gravatar.com/avatar/574b70d50334c9b55aee7cfc7b3838d682ebfe3fa7aadb605cc3f5d314895d55?s=400" alt="Petteri Valkonen">
+        <h3>Contact Information</h3>
+        <address>
+          <a id="email" href="#" data-u="petteri.valkonen" data-d="iki.fi">p&hellip;@iki.fi</a>
+          <a href="952E9EED.asc">Public key</a>
+        </address>
+        <h3>On the Interwebs</h3>
+        <ul>
+          <li><a href="https://www.linkedin.com/in/petterivalkonen">LinkedIn</a></li>
+          <li><a href="https://github.com/pvalkone">GitHub</a></li>
+          <li><a href="https://bsky.app/profile/petteri.valkonen.fi">Bluesky</a></li>
+          <li><a href="https://mas.to/@petsq" rel="me">Mastodon</a></li>
+          <li><a href="https://pvaaaaa.tumblr.com/">Tumblr</a></li>
+          <li><a href="https://www.librarything.com/profile/pva">LibraryThing</a></li>
+          <li><a href="https://www.strava.com/athletes/pvalkone">Strava</a></li>
+          <li><a href="https://portscout.freebsd.org/petteri.valkonen@iki.fi.html">portscout</a></li>
+        </ul>
+      </aside>
     </div>
     <script>
       (function () {
