@@ -113,13 +113,12 @@
         color: var(--muted);
       }
       blockquote p { margin-bottom: 0.4rem; font-size: 1rem; line-height: 1.55; }
-      blockquote cite {
-        display: block;
+      blockquote .attribution {
         font-size: 0.875rem;
         line-height: 1.4;
-        font-style: normal;
+        margin: 0;
       }
-      blockquote cite::before { content: "\2014 \00A0"; }
+      blockquote .attribution::before { content: "\2014 \00A0"; }
 
       .layout {
         display: grid;
@@ -167,7 +166,7 @@
         <h2>Curriculum Vitae&mdash;or Rather, a Lack Thereof</h2>
         <blockquote>
           <p>If you really want to hear about it, the first thing you'll probably want to know is where I was born, and what my lousy childhood was like, and how my parents were occupied and all before they had me, and all that David Copperfield kind of crap, but I don't feel like going into it, if you want to know the truth.</p>
-          <cite>J. D. Salinger, <em>The Catcher in the Rye</em></cite>
+          <p class="attribution">J. D. Salinger, <cite>The Catcher in the Rye</cite></p>
         </blockquote>
         <p>So, no, there isn't one.</p>
         <p>Should it be any consolation, for an overview of my professional qualifications and experience, you can see my <a href="https://www.linkedin.com/in/petterivalkonen">LinkedIn profile</a>. My list of publications, in all its vertigo-inducing length, is reproduced below. Finally, for the few corners of the web I've decided to call home, have a gander at the sidebar.</p>
